@@ -72,6 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Setup UI
 UI Library - Sementic UI
+https://react.semantic-ui.com/usage/
 
 Setup Project
 - install node and npm 
