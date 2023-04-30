@@ -2,3 +2,13 @@
   margin:0;
   padding: 0;
 }
+
+.error-text{
+  display: none;
+  color: red;
+}
+
+.form-input input:invalid[focused="true"] ~ .error-text{
+  display: block;
+  text-align: left;
+}

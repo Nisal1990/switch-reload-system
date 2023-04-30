@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-function InputField({field}) {
+function InputField(props) {
+  const [focused, setFocused] = useState(false);
+  const { icon, errorMessage, onChange, id, ...inputProps } = props;
+  const handleFocus = (e) => {
+    setFocused(true);
+  };
   return (
-    <div class="field">
-      <div class="ui left icon input">
-        <i class="user icon"></i>
-        <input type="text" name={field.name} placeholder="E-mail address" />
+    <div className="field form-input">
+      <div className="ui left">
+          <input
+            {...inputProps}
+            onChange={onChange}
+            onBlur={handleFocus}
+            focused={focused.toString()}
+          />
+          <div class="error-text">
+            <p>{errorMessage}</p>
+          </div>
       </div>
     </div>
   );
