@@ -4,13 +4,15 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './authentication/Login';
 import Signup from './authentication/Signup';
 import Error404 from './pages/Error404';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Login/>}/>
-        <Route path="/sign-up" element={<Signup/>}/>
+      <Route path="/" element={<Home/>}/>
+        <Route exact path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<Signup/>}/>
         <Route path="*" element={<Error404/>}/>
       </Routes>
     </div>
