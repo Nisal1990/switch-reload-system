@@ -1,54 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import LogoImg from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
-import axios from "../api/axios";
 import InputField from "./InputField";
 
-// const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
-// const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = "/register";
-
 function Signup() {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // const v1 = USER_REGEX.test(userName);
-    // const v2 = PWD_REGEX.test(password);
-    // if (!v1 || !v2) {
-    //   setErrMsg("Invalid Entry");
-    //   return;
-    // }
-    try {
-      const response = await axios.post(
-        REGISTER_URL,
-        JSON.stringify({ userName, password }),
-        {
-          headers: { "Content-Type": "application/json" },
-          withCredentials: true,
-        }
-      );
-     
-      console.log(JSON.stringify(response?.data));
-      // setSuccess(true);
-      setUserName("");
-      setPassword("");
-    } catch (err) {
-      // if (!err?.response) {
-      //   setErrMsg("No Server Response");
-      // } else if (err.response?.status === 409) {
-      //   setErrMsg("Username Taken");
-      // } else {
-      //   setErrMsg("Registration Failed");
-      // }
-      // errRef.current.focus();
-    }
-  };
-
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
 
   const [values, setValues] = useState({
     firstname: "",
@@ -58,7 +13,7 @@ function Signup() {
     password: "",
     confirmPassword: "",
   });
-
+  
   const inputFields = [
     {
       id: 1,
@@ -86,7 +41,7 @@ function Signup() {
       placeholder: "User Name/ ID",
       errorMessage:
         "User name should be 3-16 characters and shouldn't include any special character",
-      required: true,
+      required: true
     },
     {
       id: 4,
@@ -105,8 +60,8 @@ function Signup() {
       placeholder: "Password",
       errorMessage:
         "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character",
-      pattern: `^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$`,
-      required: true,
+        pattern: `^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$` ,
+        required: true,
     },
     {
       id: 6,
@@ -120,6 +75,16 @@ function Signup() {
     },
   ];
 
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+  console.log(values);
   return (
     <div
       className="ui middle aligned center aligned grid"

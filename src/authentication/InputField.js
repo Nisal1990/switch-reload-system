@@ -15,7 +15,7 @@ function InputField(props) {
             onBlur={handleFocus}
             focused={focused.toString()}
           />
-          <div className="error-text">
+          <div class="error-text">
             <p>{errorMessage}</p>
           </div>
       </div>
