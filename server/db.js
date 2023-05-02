@@ -32,11 +32,16 @@ const db = mysql.createConnection({
 })
 
 app.get('/', (req, res) => {
-    if(req.session.username){
-        return res.json({valid: true, username: req.session.username})
+    if(req.session.role){
+        return res.json({valid: true, role: req.session.role})
     } else {
         return res.json({valid: false})
     }
+})
+
+app.get('/logout', (req, res) => {
+    req.session.destroy();
+    return res.json("success");
 })
 
 app.post('/signup', (req, res) => {
@@ -62,7 +67,7 @@ app.post('/login', (req, res) => {
     db.query(sql, [req.body.username, req.body.password], (err, data) =>{
         if(err) return res.json({Message: "Error inside server"});
         if(data.length > 0){
-            req.session.username = data[0].username;
+            req.session.role = data[0].role;
             return res.json({Login: true, username: req.session.username})
         } else {
             return res.json({Login: false})

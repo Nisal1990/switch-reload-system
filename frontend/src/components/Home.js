@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Admin from '../Admin'
+import Agent from '../Agent'
+import Merchant from '../Merchant'
 
 function Home() {
-    const [name, setName] = useState('')
+    const [role, setRole] = useState('')
     const navigate = useNavigate()
     axios.defaults.withCredentials = true;
     useEffect(() => {
         axios.get('http://localhost:8081')
         .then( res => {
             if(res.data.valid){
-                setName(res.data.username);
+                setRole(res.data.role);
             } else {
                 navigate('/login')
             }
@@ -18,7 +21,12 @@ function Home() {
         .catch(err => console.log(err))
     }, [])
   return (
-    <div>Welcome {name}</div>
+    <div>
+        <h2>Role Base Authorization</h2>
+        {role === "admin" && <Admin/>}
+        {role === "agent" && <Agent/>}
+        {role === "merchant" && <Merchant/>}
+    </div>
   )
 }
 
