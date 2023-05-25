@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 
-function Merchant() {
+function TransactionHistory() {
   const userType = "Merchant"
   const navItems = [
     {
@@ -19,10 +19,10 @@ function Merchant() {
   ]
   return (
     <div>
-        <Header userType={userType} navItems={navItems}/>
-        Merchant
-    </div>
+    <Header userType={userType} navItems={navItems}/>
+    Transaction History
+  </div>
   )
 }
 
-export default Merchant
+export default TransactionHistory

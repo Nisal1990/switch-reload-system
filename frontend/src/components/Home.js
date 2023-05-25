@@ -22,7 +22,6 @@ function Home() {
     }, [])
   return (
     <div>
-        <h2>Role Base Authorization</h2>
         {role === "admin" && <Admin/>}
         {role === "agent" && <Agent/>}
         {role === "merchant" && <Merchant/>}

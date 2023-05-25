@@ -2,10 +2,11 @@ import React from 'react'
 import Header from '../components/Header'
 
 function Admin() {
+  const userType = "Admin"
   return (
     <div>
-        <Header/>
-        Admin</div>
+        <Header userType={userType}/>
+  </div>
   )
 }
 
