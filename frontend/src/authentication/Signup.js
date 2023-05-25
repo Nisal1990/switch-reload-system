@@ -127,7 +127,7 @@ function Signup() {
         </form>
 
         <div className="ui message">
-          New to us? <Link to="/signup">Sign Up</Link>
+          Login here? <Link to="/">Sign In</Link>
         </div>
       </div>
     </div>

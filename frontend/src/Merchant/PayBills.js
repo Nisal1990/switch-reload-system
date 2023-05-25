@@ -1,6 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import dialoglogo from '../assets/images/logos/dialog.png'
+import airtellogo from '../assets/images/logos/airtel.png'
+import mobitellogo from '../assets/images/logos/slt.png'
+import hutchlogo from '../assets/images/logos/hutch.png'
+import ceblogo from '../assets/images/logos/ceb.png'
+import waterboardlogo from '../assets/images/logos/waterboard.png'
 
 function PayBills() {
   const userType = "Merchant";
@@ -39,59 +45,50 @@ function PayBills() {
         <div class="ui relaxed divided list" style={{ marginTop: "15px" }}>
           <h4>Mobile</h4>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Dialog</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={dialoglogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Mobitel</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Airtel</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={airtellogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Hutch</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={hutchlogo}/></Link>
             </div>
           </div>
           <hr/>
           <h4>Internet</h4>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Dialog</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={dialoglogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Mobitel</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Airtel</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={airtellogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Hutch</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={hutchlogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">SLT</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
             </div>
           </div>
           <div class="item">
@@ -103,15 +100,13 @@ function PayBills() {
           <hr/>
           <h4>Television</h4>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">SLT Peo TV</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
             </div>
           </div>
           <div class="item">
-            <i class="large github middle aligned icon"></i>
             <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Dialog TV</Link>
+              <Link to="/merchant/pay-bills/paynow" class="header"><img src={dialoglogo}/></Link>
             </div>
           </div>
           <hr/>
