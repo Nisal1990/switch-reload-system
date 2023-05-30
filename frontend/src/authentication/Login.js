@@ -38,7 +38,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:8081/login', values)
+      .post('http://localhost:9000/login', values)
       .then(res => {
         if (res.data.Login) {
           navigate('/');
@@ -55,7 +55,7 @@ function Login() {
   };
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get('http://localhost:8081')
+    axios.get('http://localhost:9000')
     .then( res => {
         if(res.data.valid){
             navigate('/');
@@ -76,13 +76,13 @@ function Login() {
     >
       <div className="column" style={{ maxWidth: 450 }}>
         <h2 className="ui center aligned icon header">
-          Welcome <br />
+          {/* Welcome <br /> */}
           <img
             src={LogoImg}
             className="ui big image"
             style={{ width: "30%" }}
           />{" "}
-          Reload System
+          {/* Reload System */}
         </h2>
         <form className="ui large form error" onSubmit={handleSubmit}>
           <h2>Login</h2>
@@ -95,11 +95,14 @@ function Login() {
                 onChange={onChange}
               />
             ))}
-            <button className="ui fluid large orange submit button">
+            {/* <button className="ui fluid large orange submit button">
               Login
-            </button>
+            </button> */}
           </div>
         </form>
+        <Link to="/merchant/dashboard" className="ui fluid large orange submit button">
+              Login
+            </Link>
 
         <div className="ui message">
           New to us? <Link to="/signup">Sign Up</Link>

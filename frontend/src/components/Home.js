@@ -10,7 +10,7 @@ function Home() {
     const navigate = useNavigate()
     axios.defaults.withCredentials = true;
     useEffect(() => {
-        axios.get('http://localhost:8081')
+        axios.get('http://localhost:9000')
         .then( res => {
             if(res.data.valid){
                 setRole(res.data.role);

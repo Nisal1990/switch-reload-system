@@ -9,13 +9,15 @@ import Dashboard from './Merchant/Dashboard';
 import TransactionHistory from './Merchant/TransactionHistory';
 import PayBills from './Merchant/PayBills';
 import BillForm from './Merchant/BillForm';
+import Welcome from './pages/Welcome';
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route exact path="/" element={<Welcome/>}/>
         <Route path="/" element={<Home/>}/>
-        <Route exact path="/login" element={<Login/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="*" element={<Error404/>}/>
         <Route path="/merchant/dashboard" element={<Dashboard/>}/>

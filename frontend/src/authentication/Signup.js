@@ -82,7 +82,7 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8081/signup', values)
+    axios.post('http://localhost:9000/signup', values)
     .then(res => 
       {
         navigate('/');
@@ -101,13 +101,13 @@ function Signup() {
     >
       <div className="column" style={{ maxWidth: 450 }}>
         <h2 className="ui center aligned icon header">
-          Welcome <br />
+          {/* Welcome <br /> */}
           <img
             src={LogoImg}
             className="ui big image"
             style={{ width: "30%" }}
           />{" "}
-          Reload System
+          {/* Reload System */}
         </h2>
         <form className="ui large form" onSubmit={handleSubmit}>
           <h2>Register</h2>
@@ -127,7 +127,7 @@ function Signup() {
         </form>
 
         <div className="ui message">
-          Login here? <Link to="/">Sign In</Link>
+          Login here? <Link to="/login">Sign In</Link>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Header({userType, navItems}) {
     const handleLogout = () => {
-        axios.get('http://localhost:8081/logout')
+        axios.get('http://localhost:9000/logout')
         .then( res => {
            window.location.reload();
         })

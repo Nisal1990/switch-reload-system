@@ -43,94 +43,38 @@ function PayBills() {
         </div>
         
         <div class="ui relaxed divided list" style={{ marginTop: "15px" }}>
-          <h4>Mobile</h4>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={dialoglogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={airtellogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={hutchlogo}/></Link>
-            </div>
-          </div>
+          <h3>Mobile</h3>
+          <div class="ui grid">
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={dialoglogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={mobitellogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"20%"}} src={airtellogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={hutchlogo}/></Link></div>
+        </div>
           <hr/>
-          <h4>Internet</h4>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={dialoglogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={airtellogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={hutchlogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Lankabell</Link>
-            </div>
-          </div>
+          <h3>Internet</h3>
+          <div class="ui grid">
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={dialoglogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={mobitellogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"20%"}} src={airtellogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={hutchlogo}/></Link></div>
+        </div>
           <hr/>
-          <h4>Television</h4>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={mobitellogo}/></Link>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header"><img src={dialoglogo}/></Link>
-            </div>
-          </div>
+          <h3>Television</h3>
+          <div class="ui grid">
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={dialoglogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={mobitellogo}/></Link></div>
+        </div>
           <hr/>
-          <h4>Electricity</h4>
-          <div class="item">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">CEB</Link>
-            </div>
-          </div>
-          <div class="item">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Private</Link>
-            </div>
-          </div>
+          <h3>Electricity</h3>
+          <div class="ui grid">
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"20%"}} src={ceblogo}/></Link></div>
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={waterboardlogo}/></Link></div>
+        </div>
           <hr/>
           <h4>Water</h4>
-          <div class="item">
-            <i class="large github middle aligned icon"></i>
-            <div class="content">
-              <Link to="/merchant/pay-bills/paynow" class="header">Waterboard</Link>
-            </div>
-          </div>
+          <div class="ui grid">
+          <div class="four wide column"><Link to="/merchant/pay-bills/paynow" class="header"><img style={{width:"30%"}} src={waterboardlogo}/></Link></div>
+        </div>
         </div>
       </div>
     </div>
